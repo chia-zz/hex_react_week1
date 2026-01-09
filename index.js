@@ -2,7 +2,7 @@ const { useState } = React;
 
 function App() {
   const [tempProduct, setTempProduct] = useState(null);
-  const [products, setProducts] = React.useState([
+  const [products, setProducts] = useState([
     {
       category: "甜甜圈",
       content: "尺寸：14x14cm",
@@ -80,7 +80,7 @@ function App() {
             </thead>
             <tbody>
               {products.map((item) => (
-                <tr>
+                <tr key={item.id}>
                   <th scope="row">{item.title}</th>
                   <td>{item.origin_price}</td>
                   <td>{item.price}</td>
